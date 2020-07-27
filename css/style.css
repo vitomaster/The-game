@@ -1,0 +1,29 @@
+* { box-sizing: border-box; font-weight: inherit; }
+
+header { display: flex; justify-content: center; }
+
+body { background-image: url("../images/castle.jpg"); background-size: cover; background-repeat: no-repeat; }
+
+main, .new_game, .game_selector { display: flex; justify-content: center; }
+
+section { display: inline-grid; grid-auto-flow: row; grid-template-columns: 175px; grid-template-rows: 175px 175px 175px; }
+
+button { background-color: white; outline: none; background-image: url("../images/table.png"); background-position: center; background-size: cover; background-color: transparent; }
+
+.bt { border-top: none; }
+
+.bl { border-left: none; }
+
+.br { border-right: none; }
+
+.bb { border-bottom: none; }
+
+.swords { background-image: url("../images/swords.png"); }
+
+.shield { background-image: url("../images/shield.png"); }
+
+.swords, .shield, .new_game { border-style: none; background-size: contain; background-repeat: no-repeat; width: 175px; height: 175px; }
+
+.new_game { background-image: url("../images/sword.png"); width: 300px; height: 50px; margin-top: 50px; font-family: impact; font-size: 20px; letter-spacing: 0.5px; text-shadow: 5px 3px 3px black; }
+
+/*# sourceMappingURL=style.css.map */

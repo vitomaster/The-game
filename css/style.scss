@@ -1,0 +1,75 @@
+$grid_box_size:175px;
+$button_border:none;
+$button_online:none;
+@mixin default_side_margin {
+    margin-left: auto;
+    margin-right: auto;
+}
+*{
+    box-sizing: border-box;
+    font-weight: inherit;
+}
+header{
+    display: flex;
+    justify-content: center;
+}
+body{
+    background-image: url("../images/castle.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+main,.new_game,.game_selector{
+    display: flex;
+    justify-content: center;
+}
+section{
+    display: inline-grid;
+    grid-auto-flow:row;
+    grid-template-columns: $grid_box_size;
+    grid-template-rows: $grid_box_size $grid_box_size $grid_box_size;
+}
+button{
+    background-color: white;
+    outline: $button_online;
+    background-image: url("../images/table.png");
+    background-position: center;
+    background-size: cover;
+    background-color: transparent;
+
+}
+.bt{
+    border-top:$button_border;
+}
+.bl{
+    border-left: $button_border;
+}
+.br{
+    border-right: $button_border;
+}
+.bb{
+    border-bottom: $button_border;
+}
+.swords{
+    background-image: url("../images/swords.png");
+}
+.shield{
+    background-image: url("../images/shield.png");
+}
+.swords,.shield,.new_game,{
+    border-style: none;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: $grid_box_size;
+    height: $grid_box_size;
+}
+.new_game{
+    background-image: url("../images/sword.png");
+    width: 300px;
+    height: 50px;
+    margin-top: 50px;
+    font-family: impact;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+    text-shadow: 5px 3px 3px black;
+
+}
