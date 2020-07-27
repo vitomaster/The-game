@@ -9,16 +9,17 @@ $button_online:none;
     box-sizing: border-box;
     font-weight: inherit;
 }
-header{
-    display: flex;
-    justify-content: center;
+.players{
+    display: inline-flex;
+    justify-content: space-around;
+    @include default_side_margin;
 }
 body{
     background-image: url("../images/castle.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 }
-main,.new_game,.game_selector{
+main,.new_game,.game_selector,h1{
     display: flex;
     justify-content: center;
 }
@@ -71,5 +72,14 @@ button{
     font-size: 20px;
     letter-spacing: 0.5px;
     text-shadow: 5px 3px 3px black;
-
+}
+.swords:hover,.shield:hover{
+    transition: 0.4s;
+    width: 200px;
+    height: 200px;
+}
+.new_game:hover{
+    transition: 0.4s;
+    width: 400px;
+    height: 100px;
 }

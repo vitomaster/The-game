@@ -1,10 +1,10 @@
 * { box-sizing: border-box; font-weight: inherit; }
 
-header { display: flex; justify-content: center; }
+.players { display: inline-flex; justify-content: space-around; margin-left: auto; margin-right: auto; }
 
 body { background-image: url("../images/castle.jpg"); background-size: cover; background-repeat: no-repeat; }
 
-main, .new_game, .game_selector { display: flex; justify-content: center; }
+main, .new_game, .game_selector, h1 { display: flex; justify-content: center; }
 
 section { display: inline-grid; grid-auto-flow: row; grid-template-columns: 175px; grid-template-rows: 175px 175px 175px; }
 
@@ -25,5 +25,9 @@ button { background-color: white; outline: none; background-image: url("../image
 .swords, .shield, .new_game { border-style: none; background-size: contain; background-repeat: no-repeat; width: 175px; height: 175px; }
 
 .new_game { background-image: url("../images/sword.png"); width: 300px; height: 50px; margin-top: 50px; font-family: impact; font-size: 20px; letter-spacing: 0.5px; text-shadow: 5px 3px 3px black; }
+
+.swords:hover, .shield:hover { transition: 0.4s; width: 200px; height: 200px; }
+
+.new_game:hover { transition: 0.4s; width: 400px; height: 100px; }
 
 /*# sourceMappingURL=style.css.map */
