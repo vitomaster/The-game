@@ -1,5 +1,7 @@
 * { box-sizing: border-box; font-weight: inherit; }
 
+header { font-family: Medievalsharp; }
+
 .players { display: inline-flex; justify-content: space-around; margin-left: auto; margin-right: auto; }
 
 body { background-image: url("../images/castle.jpg"); background-size: cover; background-repeat: no-repeat; }
