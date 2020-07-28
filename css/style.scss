@@ -5,24 +5,25 @@ $button_online:none;
     margin-left: auto;
     margin-right: auto;
 }
+@mixin grid_normal{
+  grid-auto-flow: normal;
+  grid-template-columns: normal;
+  grid-template-rows:normal;
+}
+
 *{
     box-sizing: border-box;
     font-weight: inherit;
-}
-header{
     font-family:Medievalsharp;
-}
-.players{
-    display: inline-flex;
-    justify-content: space-around;
-    @include default_side_margin;
+    letter-spacing: 0.5px;
 }
 body{
     background-image: url("../images/castle.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+    width: 100%;
 }
-main,.new_game,.game_selector,h1{
+main,.new_game,.game_selector,h1,form,input,.players,{
     display: flex;
     justify-content: center;
 }
@@ -32,6 +33,9 @@ section{
     grid-template-columns: $grid_box_size;
     grid-template-rows: $grid_box_size $grid_box_size $grid_box_size;
 }
+.game_selector{
+    @include grid_normal;
+}
 button{
     background-color: white;
     outline: $button_online;
@@ -39,7 +43,12 @@ button{
     background-position: center;
     background-size: cover;
     background-color: transparent;
-
+}
+input{
+    width: 40px;
+    height: 40px;
+    color: white;
+    background-color: black;
 }
 .bt{
     border-top:$button_border;
@@ -58,31 +67,44 @@ button{
 }
 .shield{
     background-image: url("../images/shield.png");
+    float: right;
 }
-.swords,.shield,.new_game,{
+.swords,.shield,.new_game,.New-game-screen{
     border-style: none;
     background-size: contain;
     background-repeat: no-repeat;
     width: $grid_box_size;
     height: $grid_box_size;
+    transition: 0.4s;
+    transition-timing-function:ease;
 }
 .new_game{
-    background-image: url("../images/sword.png");
-    width: 300px;
-    height: 50px;
-    margin-top: 50px;
-    font-family: impact;
+    display: block;
+    background-image: url("../images/frame.png");
+    background-color: #676675;
+    opacity: 0.6;
+    height: 100px;
+    background-size: cover;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: bold;
     font-size: 20px;
     letter-spacing: 0.5px;
     text-shadow: 5px 3px 3px black;
+    @include default_side_margin;
+    margin-top: 25px;
 }
 .swords:hover,.shield:hover{
-    transition: 0.4s;
     width: 200px;
     height: 200px;
 }
 .new_game:hover{
-    transition: 0.4s;
-    width: 400px;
-    height: 100px;
+    background-color: white;
+    opacity: 1;
+}
+.New-game-screen{
+
+    /*background-image: url('../images/frame.png');
+    background-size: 600px 500px;
+    padding: 60px;*/
 }
